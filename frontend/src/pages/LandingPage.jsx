@@ -81,7 +81,7 @@ const Navigation = () => {
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <a href="#" className="flex items-center gap-3" data-testid="logo-link">
-          <Logo />
+          <Logo showName={true} />
         </a>
 
         {/* Desktop Navigation */}
@@ -841,8 +841,8 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-3">
-            <Logo />
-          </div>
+          <Logo showName={true} />
+        </div>
           
           <p className="text-sm text-muted-foreground text-center">
             © {new Date().getFullYear()} Wol Dynamics. Todos los derechos reservados.
