@@ -778,23 +778,24 @@ const ContactSection = () => {
                   <label className="block text-sm text-muted-foreground mb-2">
                     Servicio *
                   </label>
-                  <Select 
-                    value={formData.service} 
-                    onValueChange={(value) => setFormData({ ...formData, service: value })}
+                  <select
+                    value={formData.service}
+                    onChange={(e) => setFormData({ ...formData, service: e.target.value })}
+                    className="w-full bg-black/50 border border-white/10 focus:border-primary/50 text-white h-12 rounded-md px-3 appearance-none"
+                    data-testid="contact-service-select"
+                    style={{
+                      backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2394A3B8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E")`,
+                      backgroundRepeat: 'no-repeat',
+                      backgroundPosition: 'right 12px center',
+                      backgroundSize: '16px'
+                    }}
                   >
-                    <SelectTrigger 
-                      className="bg-black/50 border-white/10 focus:border-primary/50 text-white h-12"
-                      data-testid="contact-service-select"
-                    >
-                      <SelectValue placeholder="Seleccionar servicio" />
-                    </SelectTrigger>
-                    <SelectContent className="bg-secondary border-white/10">
-                      <SelectItem value="automatizacion">Automatización</SelectItem>
-                      <SelectItem value="desarrollo">Desarrollo Web</SelectItem>
-                      <SelectItem value="marketing">Marketing Digital</SelectItem>
-                      <SelectItem value="consulta">Consulta General</SelectItem>
-                    </SelectContent>
-                  </Select>
+                    <option value="" disabled>Seleccionar servicio</option>
+                    <option value="automatizacion">Automatización</option>
+                    <option value="desarrollo">Desarrollo Web</option>
+                    <option value="marketing">Marketing Digital</option>
+                    <option value="consulta">Consulta General</option>
+                  </select>
                 </div>
               </div>
 
