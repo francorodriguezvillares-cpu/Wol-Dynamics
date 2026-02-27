@@ -28,13 +28,22 @@ import { Textarea } from "@/components/ui/textarea";
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
 
-// Logo component
-const Logo = () => (
-  <img 
-    src="https://customer-assets.emergentagent.com/job_7fefe2a2-058b-4f01-a536-059fbe112580/artifacts/4x0i1208_Logo%20Wol%20Dynamics.png" 
-    alt="Wol Dynamics" 
-    className="h-10 w-auto"
-  />
+// Logo component with name
+const Logo = ({ showName = true, size = "default" }) => (
+  <div className="flex items-center gap-3">
+    <img 
+      src="https://customer-assets.emergentagent.com/job_7fefe2a2-058b-4f01-a536-059fbe112580/artifacts/4x0i1208_Logo%20Wol%20Dynamics.png" 
+      alt="Wol Dynamics" 
+      className={size === "large" ? "h-14 w-auto" : "h-10 w-auto"}
+    />
+    {showName && (
+      <div className="flex flex-col">
+        <span className={`font-heading font-bold text-foreground leading-none ${size === "large" ? "text-2xl" : "text-xl"}`}>
+          WOL <span className="text-primary">DYNAMICS</span>
+        </span>
+      </div>
+    )}
+  </div>
 );
 
 // WhatsApp Icon
@@ -163,11 +172,11 @@ const HeroSection = () => {
 
           {/* Main Heading */}
           <h1 
-            className="font-heading text-4xl sm:text-5xl lg:text-7xl font-bold text-foreground mb-6 animate-slide-up"
+            className="font-heading text-4xl sm:text-5xl lg:text-7xl font-bold text-foreground mb-6 animate-slide-up leading-tight pb-2"
             style={{ animationDelay: '0.1s' }}
           >
             Transformamos tu negocio con
-            <span className="block text-primary text-glow mt-2">
+            <span className="block text-primary text-glow mt-2 pb-1">
               Automatización Inteligente
             </span>
           </h1>
