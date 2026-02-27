@@ -290,7 +290,7 @@ const ServicesSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <span className="text-primary font-mono text-sm tracking-wider">SERVICIOS</span>
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-6">
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-6 leading-tight pb-1">
             Soluciones que impulsan tu <span className="text-primary">crecimiento</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -394,7 +394,7 @@ const PricingSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <span className="text-primary font-mono text-sm tracking-wider">PLANES</span>
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-6">
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-6 leading-tight pb-1">
             Inversión que genera <span className="text-primary">retorno</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -517,7 +517,7 @@ const PortfolioSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <span className="text-primary font-mono text-sm tracking-wider">PORTFOLIO</span>
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-6">
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-6 leading-tight pb-1">
             Proyectos que <span className="text-primary">hablan por sí solos</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -600,7 +600,7 @@ const TestimonialsSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <span className="text-primary font-mono text-sm tracking-wider">TESTIMONIOS</span>
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-6">
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-6 leading-tight pb-1">
             Lo que dicen <span className="text-primary">nuestros clientes</span>
           </h2>
         </div>
@@ -682,7 +682,7 @@ const ContactSection = () => {
           {/* Left Column - Info */}
           <div>
             <span className="text-primary font-mono text-sm tracking-wider">CONTACTO</span>
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-6">
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-6 leading-tight pb-1">
               ¿Listo para <span className="text-primary">automatizar</span> tu negocio?
             </h2>
             <p className="text-muted-foreground mb-8 leading-relaxed">
