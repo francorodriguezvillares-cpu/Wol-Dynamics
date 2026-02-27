@@ -1,0 +1,164 @@
+{
+  "design_system": {
+    "brand_name": "Wol Dynamics",
+    "theme": "dark",
+    "emotional_archetype": "Electric & Neon (Future, Speed, Disruption)",
+    "description": "A futuristic, high-performance automation and marketing agency. The design should feel like a 'command center' or a high-tech interface (HUD).",
+    "typography": {
+      "headings": {
+        "font_family": "Syne, 'Space Grotesk', sans-serif",
+        "weight": "700",
+        "style": "Technological, aggressive, sharp",
+        "usage": "Use for all H1-H3. Tight tracking for large text."
+      },
+      "body": {
+        "font_family": "Manrope, 'DM Sans', sans-serif",
+        "weight": "400",
+        "style": "Clean, highly legible, neutral",
+        "usage": "Use for paragraphs, UI elements, data inputs."
+      },
+      "mono": {
+        "font_family": "'JetBrains Mono', monospace",
+        "usage": "Use for code snippets, tiny labels, data tags, and decorative 'terminal' elements."
+      }
+    },
+    "colors": {
+      "palette": {
+        "background": "#030305",
+        "foreground": "#F8FAFC",
+        "primary": "#00A2FF",
+        "primary_foreground": "#FFFFFF",
+        "secondary": "#0F172A",
+        "secondary_foreground": "#F8FAFC",
+        "accent": "#2E9DFA",
+        "accent_foreground": "#000000",
+        "muted": "#1E293B",
+        "muted_foreground": "#94A3B8",
+        "border": "#1E293B",
+        "input": "#1E293B",
+        "ring": "#00A2FF"
+      },
+      "gradients": {
+        "hero_glow": "radial-gradient(circle at center, rgba(0, 162, 255, 0.15) 0%, rgba(3, 3, 5, 0) 70%)",
+        "glass_surface": "linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%)",
+        "cyan_beam": "linear-gradient(90deg, transparent, #00A2FF, transparent)"
+      }
+    },
+    "spacing": {
+      "container_padding": "p-6 md:p-12 lg:p-24",
+      "section_gap": "gap-16 md:gap-32",
+      "element_gap": "gap-4 md:gap-8"
+    },
+    "visual_enhancers": {
+      "glassmorphism": {
+        "style": "Crystal Glass",
+        "classes": "bg-black/40 backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.5)]"
+      },
+      "glow_effects": {
+        "text_glow": "drop-shadow-[0_0_10px_rgba(0,162,255,0.5)]",
+        "border_glow": "box-shadow: 0 0 15px rgba(0, 162, 255, 0.3)"
+      },
+      "borders": {
+        "tech_border": "1px solid rgba(255, 255, 255, 0.1)"
+      }
+    },
+    "motion": {
+      "principles": "Smooth, mechanical, precision-focused.",
+      "transitions": "transition-all duration-300 ease-out",
+      "scroll": "Parallax effects on background elements. Fade-in-up for content."
+    }
+  },
+  "layout_strategies": {
+    "landing_page": {
+      "hero": {
+        "type": "Immersive Center Focus",
+        "elements": [
+          "H1: Large, glowing text (Syne/Space Grotesk)",
+          "Subtext: Monospace tech specs",
+          "Visual: 3D spline object or Abstract Cyan Network background",
+          "CTA: 'Tracing Beam' button style"
+        ]
+      },
+      "services": {
+        "type": "Bento Grid (Mode A)",
+        "cards": "Glassmorphism cards with hover glow effects. Icons should be neon/tech style."
+      },
+      "pricing": {
+        "type": "Comparison Cards",
+        "highlight": "Professional Plan (700k) should have a 'Cyberpunk' border glow."
+      },
+      "portfolio": {
+        "type": "Masonry or Horizontal Scroll",
+        "style": "High contrast thumbnails with hover-reveal details."
+      },
+      "testimonials": {
+        "type": "Infinite Marquee (Kinetic Texture)",
+        "style": "Large text moving slowly, or cards in a carousel."
+      }
+    },
+    "admin_dashboard": {
+      "type": "High Density Grid (Mode B)",
+      "style": "HUD / Terminal interface. Dark background, monospace data, clear grid lines."
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-primary text-white hover:bg-primary/90 rounded-none skew-x-[-10deg] (Tech look)",
+      "secondary": "border border-primary/50 text-primary hover:bg-primary/10 rounded-none skew-x-[-10deg]",
+      "floating_whatsapp": "Fixed bottom-right, distinct green or brand cyan, pulsing glow."
+    },
+    "cards": {
+      "service_card": "bg-secondary/30 border border-white/5 hover:border-primary/50 transition-colors p-8 relative overflow-hidden group"
+    },
+    "inputs": {
+      "style": "bg-black/50 border-white/10 focus:border-primary/50 text-white rounded-md h-12"
+    }
+  },
+  "assets": {
+    "images": {
+      "hero_bg": {
+        "url": "https://images.unsplash.com/photo-1746470427657-eb0b0115455f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTF8MHwxfHNlYXJjaHw0fHxmdXR1cmlzdGljJTIwYWJzdHJhY3QlMjB0ZWNobm9sb2d5JTIwY3lhbiUyMGJsdWV8ZW58MHx8fHwxNzcyMjMzNzk3fDA&ixlib=rb-4.1.0&q=85",
+        "alt": "Abstract blue futuristic waves"
+      },
+      "tech_abstract_orb": {
+        "url": "https://images.unsplash.com/photo-1761652661873-a08d8cb25b66?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTF8MHwxfHNlYXJjaHwxfHxmdXR1cmlzdGljJTIwYWJzdHJhY3QlMjB0ZWNobm9sb2d5JTIwY3lhbiUyMGJsdWV8ZW58MHx8fHwxNzcyMjMzNzk3fDA&ixlib=rb-4.1.0&q=85",
+        "alt": "Glowing blue orb technology"
+      },
+      "office_dark": {
+        "url": "https://images.unsplash.com/photo-1758520145147-c30bc656f314?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzR8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjBwcm9mZXNzaW9uYWwlMjB0ZWFtJTIwd29ya2luZyUyMGRhcmslMjBvZmZpY2V8ZW58MHx8fHwxNzcyMjMzNzk4fDA&ixlib=rb-4.1.0&q=85",
+        "alt": "Dark mode office aesthetic"
+      },
+      "laptop_work": {
+        "url": "https://images.unsplash.com/photo-1702360174953-b9d72d5ddba2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzR8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBwcm9mZXNzaW9uYWwlMjB0ZWFtJTIwd29ya2luZyUyMGRhcmslMjBvZmZpY2V8ZW58MHx8fHwxNzcyMjMzNzk4fDA&ixlib=rb-4.1.0&q=85",
+        "alt": "Laptop in dark room"
+      },
+      "logo": {
+        "url": "https://customer-assets.emergentagent.com/job_7fefe2a2-058b-4f01-a536-059fbe112580/artifacts/4x0i1208_Logo%20Wol%20Dynamics.png",
+        "alt": "Wol Dynamics Logo"
+      }
+    },
+    "icons": {
+      "library": "lucide-react",
+      "style": "Stroke width 1.5, sharp or rounded depending on context."
+    }
+  },
+  "instructions_to_main_agent": [
+    "FORCE DARK MODE: The application must be permanently in dark mode. Do not implement a light mode toggle.",
+    "NAVIGATION: Use a sticky glassmorphism header with the logo on the left and a 'Get Started' button on the right.",
+    "HERO SECTION: Use the 'hero_bg' image as a background with an overlay gradient to ensure text readability.",
+    "PRICING: Display prices in ARS (Argentine Pesos). '300k' means $300,000.",
+    "CONTACT: Implement the contact form to save messages to the backend. The Admin Panel should fetch and display these.",
+    "WHATSAPP: Add a floating button that links to https://wa.me/5491135921999.",
+    "ADMIN: Simple auth (or just hidden route for MVP) to view messages. Use a table layout.",
+    "NO DEFAULT SHADCN LOOK: Customize the radius to be smaller (rounded-sm or rounded-md) and use the specified color palette."
+  ],
+  "universal_guidelines": [
+    "Do not use gradients for dark colors.",
+    "Avoid generic centered layouts; use asymmetry.",
+    "Use z-index to create depth.",
+    "No 'transition: all'.",
+    "No emoji icons.",
+    "Use 'sonner' for toasts.",
+    "All interactive elements must have 'data-testid'."
+  ]
+}
