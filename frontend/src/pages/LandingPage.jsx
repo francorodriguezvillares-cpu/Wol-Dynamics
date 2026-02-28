@@ -288,12 +288,12 @@ const ServicesSection = () => {
       
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-20">
           <span className="text-primary font-mono text-sm tracking-wider">SERVICIOS</span>
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-6 leading-tight pb-1">
+          <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mt-4 mb-8" style={{ lineHeight: '1.3' }}>
             Soluciones que impulsan tu <span className="text-primary">crecimiento</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Combinamos tecnología avanzada con estrategia de negocio para crear soluciones 
             que generan resultados reales.
           </p>
@@ -314,18 +314,18 @@ const ServicesSection = () => {
               </div>
 
               {/* Content */}
-              <h3 className="font-heading text-xl font-semibold text-foreground mb-3">
+              <h3 className="font-heading text-2xl font-semibold text-foreground mb-4">
                 {service.title}
               </h3>
-              <p className="text-muted-foreground text-sm mb-6 leading-relaxed">
+              <p className="text-muted-foreground text-base mb-6 leading-relaxed">
                 {service.description}
               </p>
 
               {/* Features */}
-              <ul className="space-y-2">
+              <ul className="space-y-3">
                 {service.features.map((feature) => (
-                  <li key={feature} className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <li key={feature} className="flex items-center gap-3 text-base text-muted-foreground">
+                    <Check className="w-5 h-5 text-primary flex-shrink-0" />
                     {feature}
                   </li>
                 ))}
