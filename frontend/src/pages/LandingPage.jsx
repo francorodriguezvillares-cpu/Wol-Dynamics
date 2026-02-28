@@ -392,20 +392,20 @@ const PricingSection = () => {
     >
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-20">
           <span className="text-primary font-mono text-sm tracking-wider">PLANES</span>
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-6 leading-tight pb-1">
+          <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mt-4 mb-8" style={{ lineHeight: '1.3' }}>
             Inversión que genera <span className="text-primary">retorno</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Planes diseñados para cada etapa de tu negocio. Sin costos ocultos.
           </p>
           
           {/* Consulta Banner */}
-          <div className="inline-flex items-center gap-2 glass px-6 py-3 rounded-full mt-8 border-glow">
-            <MessageSquare className="w-5 h-5 text-primary" />
-            <span className="text-foreground font-medium">Primera consulta:</span>
-            <span className="text-primary font-heading font-bold">$50.000</span>
+          <div className="inline-flex items-center gap-3 glass px-8 py-4 rounded-full mt-10 border-glow">
+            <MessageSquare className="w-6 h-6 text-primary" />
+            <span className="text-lg text-foreground font-medium">Primera consulta:</span>
+            <span className="text-primary font-heading font-bold text-2xl">$50.000</span>
           </div>
         </div>
 
@@ -428,28 +428,28 @@ const PricingSection = () => {
               )}
 
               <div className="text-center mb-8">
-                <h3 className="font-heading text-xl font-semibold text-foreground mb-2">
+                <h3 className="font-heading text-2xl font-semibold text-foreground mb-3">
                   {plan.name}
                 </h3>
-                <p className="text-sm text-muted-foreground mb-4">
+                <p className="text-base text-muted-foreground mb-6">
                   {plan.description}
                 </p>
                 <div className="flex items-baseline justify-center gap-1">
                   {plan.price !== "Cotización" && (
-                    <span className="text-muted-foreground">$</span>
+                    <span className="text-muted-foreground text-lg">$</span>
                   )}
-                  <span className={`font-heading text-4xl font-bold ${plan.featured ? 'text-primary text-glow-sm' : 'text-foreground'}`}>
+                  <span className={`font-heading text-5xl font-bold ${plan.featured ? 'text-primary text-glow-sm' : 'text-foreground'}`}>
                     {plan.price}
                   </span>
                   {plan.price !== "Cotización" && (
-                    <span className="text-muted-foreground text-sm ml-1">ARS</span>
+                    <span className="text-muted-foreground text-base ml-2">ARS</span>
                   )}
                 </div>
               </div>
 
-              <ul className="space-y-3 mb-8">
+              <ul className="space-y-4 mb-10">
                 {plan.features.map((feature) => (
-                  <li key={feature} className="flex items-start gap-3 text-sm">
+                  <li key={feature} className="flex items-start gap-3 text-base">
                     <Check className={`w-5 h-5 flex-shrink-0 mt-0.5 ${plan.featured ? 'text-primary' : 'text-muted-foreground'}`} />
                     <span className="text-muted-foreground">{feature}</span>
                   </li>
