@@ -515,12 +515,12 @@ const PortfolioSection = () => {
     >
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-20">
           <span className="text-primary font-mono text-sm tracking-wider">PORTFOLIO</span>
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-6 leading-tight pb-1">
+          <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mt-4 mb-8" style={{ lineHeight: '1.3' }}>
             Proyectos que <span className="text-primary">hablan por sí solos</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Resultados tangibles para empresas reales.
           </p>
         </div>
@@ -542,14 +542,14 @@ const PortfolioSection = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
               </div>
               
-              <div className="absolute bottom-0 left-0 right-0 p-6">
-                <span className="inline-block px-3 py-1 text-xs font-mono text-primary bg-primary/10 rounded-full mb-3">
+              <div className="absolute bottom-0 left-0 right-0 p-8">
+                <span className="inline-block px-4 py-1.5 text-sm font-mono text-primary bg-primary/10 rounded-full mb-4">
                   {project.category}
                 </span>
-                <h3 className="font-heading text-xl font-semibold text-foreground mb-2">
+                <h3 className="font-heading text-2xl font-semibold text-foreground mb-3">
                   {project.title}
                 </h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-base text-muted-foreground">
                   {project.description}
                 </p>
               </div>
@@ -598,9 +598,9 @@ const TestimonialsSection = () => {
     >
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-20">
           <span className="text-primary font-mono text-sm tracking-wider">TESTIMONIOS</span>
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-6 leading-tight pb-1">
+          <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mt-4 mb-8" style={{ lineHeight: '1.3' }}>
             Lo que dicen <span className="text-primary">nuestros clientes</span>
           </h2>
         </div>
@@ -611,21 +611,21 @@ const TestimonialsSection = () => {
             {[...testimonials, ...testimonials].map((testimonial, index) => (
               <div 
                 key={index}
-                className="flex-shrink-0 w-[400px] glass p-6 rounded-lg"
+                className="flex-shrink-0 w-[450px] glass p-8 rounded-lg"
                 data-testid={`testimonial-${index}`}
               >
-                <p className="text-muted-foreground mb-6 leading-relaxed">
+                <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
                   "{testimonial.content}"
                 </p>
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
-                    <span className="font-heading font-bold text-primary">
+                  <div className="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center">
+                    <span className="font-heading font-bold text-primary text-lg">
                       {testimonial.avatar}
                     </span>
                   </div>
                   <div>
-                    <div className="font-semibold text-foreground">{testimonial.author}</div>
-                    <div className="text-sm text-muted-foreground">{testimonial.role}</div>
+                    <div className="font-semibold text-lg text-foreground">{testimonial.author}</div>
+                    <div className="text-base text-muted-foreground">{testimonial.role}</div>
                   </div>
                 </div>
               </div>
