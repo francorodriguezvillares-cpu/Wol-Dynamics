@@ -682,61 +682,61 @@ const ContactSection = () => {
           {/* Left Column - Info */}
           <div>
             <span className="text-primary font-mono text-sm tracking-wider">CONTACTO</span>
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-6 leading-tight pb-1">
+            <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mt-4 mb-8" style={{ lineHeight: '1.3' }}>
               ¿Listo para <span className="text-primary">automatizar</span> tu negocio?
             </h2>
-            <p className="text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
               Contanos sobre tu proyecto y te ayudamos a encontrar la mejor solución. 
               Primera consulta de diagnóstico a solo $50.000.
             </p>
 
             {/* Contact Info */}
-            <div className="space-y-6">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <Phone className="w-5 h-5 text-primary" />
+            <div className="space-y-8">
+              <div className="flex items-center gap-5">
+                <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <Phone className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <div className="text-sm text-muted-foreground">WhatsApp</div>
+                  <div className="text-base text-muted-foreground">WhatsApp</div>
                   <a 
                     href="https://wa.me/5491135921999" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-foreground hover:text-primary transition-colors"
+                    className="text-xl text-foreground hover:text-primary transition-colors font-medium"
                   >
                     +54 11 3592-1999
                   </a>
                 </div>
               </div>
               
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <Clock className="w-5 h-5 text-primary" />
+              <div className="flex items-center gap-5">
+                <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <Clock className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <div className="text-sm text-muted-foreground">Horario</div>
-                  <div className="text-foreground">Lun - Vie: 9:00 - 18:00</div>
+                  <div className="text-base text-muted-foreground">Horario</div>
+                  <div className="text-xl text-foreground font-medium">Lun - Vie: 9:00 - 18:00</div>
                 </div>
               </div>
               
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <Shield className="w-5 h-5 text-primary" />
+              <div className="flex items-center gap-5">
+                <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <Shield className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <div className="text-sm text-muted-foreground">Garantía</div>
-                  <div className="text-foreground">Satisfacción 100% garantizada</div>
+                  <div className="text-base text-muted-foreground">Garantía</div>
+                  <div className="text-xl text-foreground font-medium">Satisfacción 100% garantizada</div>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Right Column - Form */}
-          <div className="glass-strong rounded-lg p-8">
+          <div className="glass-strong rounded-lg p-10">
             <form onSubmit={handleSubmit} className="space-y-6" data-testid="contact-form">
-              <div className="grid sm:grid-cols-2 gap-4">
+              <div className="grid sm:grid-cols-2 gap-5">
                 <div>
-                  <label className="block text-sm text-muted-foreground mb-2">
+                  <label className="block text-base text-muted-foreground mb-3">
                     Nombre *
                   </label>
                   <Input
@@ -744,12 +744,12 @@ const ContactSection = () => {
                     placeholder="Tu nombre"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="bg-black/50 border-white/10 focus:border-primary/50 text-white h-12"
+                    className="bg-black/50 border-white/10 focus:border-primary/50 text-white h-14 text-base"
                     data-testid="contact-name-input"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm text-muted-foreground mb-2">
+                  <label className="block text-base text-muted-foreground mb-3">
                     Email *
                   </label>
                   <Input
@@ -757,15 +757,15 @@ const ContactSection = () => {
                     placeholder="tu@email.com"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="bg-black/50 border-white/10 focus:border-primary/50 text-white h-12"
+                    className="bg-black/50 border-white/10 focus:border-primary/50 text-white h-14 text-base"
                     data-testid="contact-email-input"
                   />
                 </div>
               </div>
 
-              <div className="grid sm:grid-cols-2 gap-4">
+              <div className="grid sm:grid-cols-2 gap-5">
                 <div>
-                  <label className="block text-sm text-muted-foreground mb-2">
+                  <label className="block text-base text-muted-foreground mb-3">
                     Teléfono
                   </label>
                   <Input
@@ -773,18 +773,18 @@ const ContactSection = () => {
                     placeholder="+54 11 1234-5678"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="bg-black/50 border-white/10 focus:border-primary/50 text-white h-12"
+                    className="bg-black/50 border-white/10 focus:border-primary/50 text-white h-14 text-base"
                     data-testid="contact-phone-input"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm text-muted-foreground mb-2">
+                  <label className="block text-base text-muted-foreground mb-3">
                     Servicio *
                   </label>
                   <select
                     value={formData.service}
                     onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                    className="w-full bg-black/50 border border-white/10 focus:border-primary/50 text-white h-12 rounded-md px-3 appearance-none"
+                    className="w-full bg-black/50 border border-white/10 focus:border-primary/50 text-white h-14 rounded-md px-4 appearance-none text-base"
                     data-testid="contact-service-select"
                     style={{
                       backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2394A3B8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E")`,
@@ -803,14 +803,14 @@ const ContactSection = () => {
               </div>
 
               <div>
-                <label className="block text-sm text-muted-foreground mb-2">
+                <label className="block text-base text-muted-foreground mb-3">
                   Mensaje *
                 </label>
                 <Textarea
                   placeholder="Contanos sobre tu proyecto..."
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="bg-black/50 border-white/10 focus:border-primary/50 text-white min-h-[120px] resize-none"
+                  className="bg-black/50 border-white/10 focus:border-primary/50 text-white min-h-[140px] resize-none text-base"
                   data-testid="contact-message-input"
                 />
               </div>
@@ -818,7 +818,7 @@ const ContactSection = () => {
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full skew-button bg-primary hover:bg-primary/90 text-black font-semibold h-12"
+                className="w-full skew-button bg-primary hover:bg-primary/90 text-black font-semibold h-14 text-lg"
                 data-testid="contact-submit-button"
               >
                 <span className="skew-button-content flex items-center justify-center gap-2">
