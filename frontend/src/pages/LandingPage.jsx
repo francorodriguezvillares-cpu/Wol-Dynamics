@@ -172,18 +172,18 @@ const HeroSection = () => {
 
           {/* Main Heading */}
           <h1 
-            className="font-heading text-4xl sm:text-5xl lg:text-7xl font-bold text-foreground mb-6 animate-slide-up leading-tight pb-2"
-            style={{ animationDelay: '0.1s' }}
+            className="font-heading text-5xl sm:text-6xl lg:text-8xl font-bold text-foreground mb-8 animate-slide-up"
+            style={{ animationDelay: '0.1s', lineHeight: '1.3' }}
           >
             Transformamos tu negocio con
-            <span className="block text-primary text-glow mt-2 pb-1">
+            <span className="block text-primary text-glow mt-3">
               Automatización Inteligente
             </span>
           </h1>
 
           {/* Subheading */}
           <p 
-            className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto mb-10 font-body animate-slide-up"
+            className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-12 font-body animate-slide-up"
             style={{ animationDelay: '0.2s' }}
           >
             Optimizamos procesos, creamos experiencias digitales únicas y potenciamos 
@@ -224,7 +224,7 @@ const HeroSection = () => {
 
           {/* Stats */}
           <div 
-            className="grid grid-cols-3 gap-8 max-w-xl mx-auto mt-16 animate-slide-up"
+            className="grid grid-cols-3 gap-12 max-w-2xl mx-auto mt-20 animate-slide-up"
             style={{ animationDelay: '0.4s' }}
           >
             {[
@@ -233,10 +233,10 @@ const HeroSection = () => {
               { value: "24/7", label: "Soporte" },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
-                <div className="text-2xl sm:text-3xl font-heading font-bold text-primary text-glow-sm">
+                <div className="text-3xl sm:text-4xl font-heading font-bold text-primary text-glow-sm">
                   {stat.value}
                 </div>
-                <div className="text-xs sm:text-sm text-muted-foreground font-mono mt-1">
+                <div className="text-sm sm:text-base text-muted-foreground font-mono mt-2">
                   {stat.label}
                 </div>
               </div>
