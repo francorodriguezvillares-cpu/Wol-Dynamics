@@ -67,8 +67,8 @@ const Navigation = () => {
   const navLinks = [
     { href: "#servicios", label: "Servicios" },
     { href: "#planes", label: "Planes" },
-    { href: "#portfolio", label: "Portfolio" },
-    { href: "#testimonios", label: "Testimonios" },
+    { href: "#porque", label: "¿Por qué yo?" },
+    { href: "#sobre-mi", label: "Sobre mí" },
     { href: "#contacto", label: "Contacto" },
   ];
 
@@ -222,23 +222,19 @@ const HeroSection = () => {
             </a>
           </div>
 
-          {/* Stats */}
+          {/* Value Props */}
           <div 
-            className="grid grid-cols-3 gap-12 max-w-2xl mx-auto mt-20 animate-slide-up"
+            className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto mt-20 animate-slide-up"
             style={{ animationDelay: '0.4s' }}
           >
             {[
-              { value: "50+", label: "Proyectos" },
-              { value: "98%", label: "Satisfacción" },
-              { value: "24/7", label: "Soporte" },
-            ].map((stat) => (
-              <div key={stat.label} className="text-center">
-                <div className="text-3xl sm:text-4xl font-heading font-bold text-primary text-glow-sm">
-                  {stat.value}
-                </div>
-                <div className="text-sm sm:text-base text-muted-foreground font-mono mt-2">
-                  {stat.label}
-                </div>
+              { icon: Zap, label: "Respuesta rápida" },
+              { icon: Shield, label: "Compromiso total" },
+              { icon: TrendingUp, label: "Precios accesibles" },
+            ].map((item) => (
+              <div key={item.label} className="flex items-center justify-center gap-3 glass px-4 py-3 rounded-full">
+                <item.icon className="w-5 h-5 text-primary" />
+                <span className="text-sm text-muted-foreground">{item.label}</span>
               </div>
             ))}
           </div>
@@ -478,79 +474,67 @@ const PricingSection = () => {
   );
 };
 
-// Portfolio Section
-const PortfolioSection = () => {
-  const projects = [
+// Portfolio Section - Replaced with "Why Choose Me" section
+const WhyChooseMeSection = () => {
+  const reasons = [
     {
-      title: "E-commerce Automatizado",
-      category: "Automatización",
-      image: "https://images.unsplash.com/photo-1661956602116-aa6865609028?w=600&h=400&fit=crop",
-      description: "Sistema de gestión de inventario y pedidos automatizado"
+      icon: Zap,
+      title: "Dedicación 100%",
+      description: "Tu proyecto será mi prioridad. Sin distracciones, con atención personalizada de principio a fin."
     },
     {
-      title: "Plataforma SaaS",
-      category: "Desarrollo Web",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
-      description: "Dashboard analítico con integraciones múltiples"
+      icon: TrendingUp,
+      title: "Precios justos",
+      description: "Al ser nuevo, ofrezco precios competitivos sin sacrificar calidad. Invertí en resultados, no en oficinas."
     },
     {
-      title: "Campaña Digital 360",
-      category: "Marketing",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
-      description: "Estrategia multicanal con 300% ROI"
+      icon: Clock,
+      title: "Comunicación directa",
+      description: "Hablás directamente conmigo, sin intermediarios. Respuestas rápidas y actualizaciones constantes."
     },
     {
-      title: "CRM Personalizado",
-      category: "Automatización",
-      image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&h=400&fit=crop",
-      description: "Gestión de clientes con IA integrada"
+      icon: Sparkles,
+      title: "Tecnología actual",
+      description: "Uso las herramientas y técnicas más modernas del mercado para crear soluciones eficientes."
     }
   ];
 
   return (
     <section 
-      id="portfolio" 
+      id="porque" 
       className="relative py-24 overflow-hidden"
-      data-testid="portfolio-section"
+      data-testid="why-section"
     >
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-20">
-          <span className="text-primary font-mono text-sm tracking-wider">PORTFOLIO</span>
-          <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mt-4 mb-8" style={{ lineHeight: '1.3' }}>
-            Proyectos que <span className="text-primary">hablan por sí solos</span>
+          <span className="text-primary font-mono text-sm tracking-wider">¿POR QUÉ ELEGIRME?</span>
+          <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mt-4 mb-8" style={{ lineHeight: '1.4' }}>
+            Nuevo, pero <span className="text-primary">comprometido</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Resultados tangibles para empresas reales.
+            Soy nuevo en esto, y eso significa que voy a dar todo para que tu proyecto sea un éxito. 
+            Tu confianza es mi mejor carta de presentación.
           </p>
         </div>
 
-        {/* Projects Grid */}
+        {/* Reasons Grid */}
         <div className="grid md:grid-cols-2 gap-6">
-          {projects.map((project, index) => (
+          {reasons.map((reason, index) => (
             <div 
-              key={project.title}
-              className="group relative glass rounded-lg overflow-hidden"
-              data-testid={`portfolio-item-${index}`}
+              key={reason.title}
+              className="service-card glass p-8 rounded-lg group hover:border-primary/50 flex gap-6"
+              data-testid={`reason-card-${index}`}
             >
-              <div className="aspect-video overflow-hidden">
-                <img 
-                  src={project.image} 
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+              <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
+                <reason.icon className="w-7 h-7 text-primary" />
               </div>
-              
-              <div className="absolute bottom-0 left-0 right-0 p-8">
-                <span className="inline-block px-4 py-1.5 text-sm font-mono text-primary bg-primary/10 rounded-full mb-4">
-                  {project.category}
-                </span>
-                <h3 className="font-heading text-2xl font-semibold text-foreground mb-3">
-                  {project.title}
+              <div>
+                <h3 className="font-heading text-xl font-semibold text-foreground mb-3">
+                  {reason.title}
                 </h3>
-                <p className="text-base text-muted-foreground">
-                  {project.description}
+                <p className="text-muted-foreground leading-relaxed">
+                  {reason.description}
                 </p>
               </div>
             </div>
@@ -561,75 +545,62 @@ const PortfolioSection = () => {
   );
 };
 
-// Testimonials Section
-const TestimonialsSection = () => {
-  const testimonials = [
-    {
-      content: "Wol Dynamics automatizó nuestro proceso de facturación y redujimos errores en un 95%. Increíble trabajo.",
-      author: "María González",
-      role: "CEO, TechStart",
-      avatar: "MG"
-    },
-    {
-      content: "El equipo entendió exactamente lo que necesitábamos. Nuestra web convierte 3x más que antes.",
-      author: "Carlos Rodríguez",
-      role: "Fundador, EcoStore",
-      avatar: "CR"
-    },
-    {
-      content: "Las campañas de marketing superaron todas nuestras expectativas. ROI del 400% en 3 meses.",
-      author: "Ana Martínez",
-      role: "CMO, FinanceApp",
-      avatar: "AM"
-    },
-    {
-      content: "Profesionales, puntuales y con resultados. Ya llevamos 5 proyectos juntos.",
-      author: "Diego López",
-      role: "Director, LogiTech",
-      avatar: "DL"
-    }
-  ];
-
+// About Section - Personal touch
+const AboutSection = () => {
   return (
     <section 
-      id="testimonios" 
+      id="sobre-mi" 
       className="relative py-24 overflow-hidden"
-      data-testid="testimonials-section"
+      data-testid="about-section"
     >
+      <div className="absolute inset-0 gradient-radial" />
+      
       <div className="relative z-10 max-w-7xl mx-auto px-6">
-        {/* Section Header */}
-        <div className="text-center mb-20">
-          <span className="text-primary font-mono text-sm tracking-wider">TESTIMONIOS</span>
-          <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mt-4 mb-8" style={{ lineHeight: '1.3' }}>
-            Lo que dicen <span className="text-primary">nuestros clientes</span>
-          </h2>
-        </div>
-
-        {/* Testimonials Marquee */}
-        <div className="marquee">
-          <div className="marquee-content gap-6">
-            {[...testimonials, ...testimonials].map((testimonial, index) => (
-              <div 
-                key={index}
-                className="flex-shrink-0 w-[450px] glass p-8 rounded-lg"
-                data-testid={`testimonial-${index}`}
-              >
-                <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                  "{testimonial.content}"
-                </p>
-                <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center">
-                    <span className="font-heading font-bold text-primary text-lg">
-                      {testimonial.avatar}
-                    </span>
-                  </div>
-                  <div>
-                    <div className="font-semibold text-lg text-foreground">{testimonial.author}</div>
-                    <div className="text-base text-muted-foreground">{testimonial.role}</div>
-                  </div>
-                </div>
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <span className="text-primary font-mono text-sm tracking-wider">SOBRE MÍ</span>
+            <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mt-4 mb-8" style={{ lineHeight: '1.4' }}>
+              Hola, soy el <span className="text-primary">fundador</span>
+            </h2>
+            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+              <p>
+                Tengo 18 años y una pasión enorme por la tecnología y la automatización. 
+                Decidí crear <span className="text-primary font-semibold">Wol Dynamics</span> porque 
+                creo que muchos negocios pueden mejorar sus procesos sin gastar fortunas.
+              </p>
+              <p>
+                Soy autodidacta, curioso y no paro hasta lograr los resultados. 
+                Lo que me falta en experiencia, lo compenso con dedicación, ganas de aprender 
+                y precios que se adaptan a tu realidad.
+              </p>
+              <p>
+                Si estás buscando alguien que realmente se involucre en tu proyecto 
+                y que no te vea solo como un número más, hablemos.
+              </p>
+            </div>
+          </div>
+          
+          <div className="glass-strong rounded-lg p-8 text-center">
+            <div className="w-32 h-32 mx-auto rounded-full bg-primary/20 flex items-center justify-center mb-6">
+              <span className="font-heading text-5xl font-bold text-primary">W</span>
+            </div>
+            <h3 className="font-heading text-2xl font-bold text-foreground mb-2">Wol Dynamics</h3>
+            <p className="text-muted-foreground mb-6">Fundado en 2025</p>
+            
+            <div className="space-y-4">
+              <div className="flex items-center justify-center gap-3 text-muted-foreground">
+                <Users className="w-5 h-5 text-primary" />
+                <span>Atención personalizada</span>
               </div>
-            ))}
+              <div className="flex items-center justify-center gap-3 text-muted-foreground">
+                <Zap className="w-5 h-5 text-primary" />
+                <span>Respuesta en menos de 24hs</span>
+              </div>
+              <div className="flex items-center justify-center gap-3 text-muted-foreground">
+                <Shield className="w-5 h-5 text-primary" />
+                <span>Compromiso real</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -889,8 +860,8 @@ const LandingPage = () => {
       <HeroSection />
       <ServicesSection />
       <PricingSection />
-      <PortfolioSection />
-      <TestimonialsSection />
+      <WhyChooseMeSection />
+      <AboutSection />
       <ContactSection />
       <Footer />
       <WhatsAppButton />
