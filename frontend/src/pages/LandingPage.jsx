@@ -224,7 +224,7 @@ const HeroSection = () => {
 
           {/* Value Props */}
           <div 
-            className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto mt-20 animate-slide-up"
+            className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto mt-16 animate-slide-up"
             style={{ animationDelay: '0.4s' }}
           >
             {[
@@ -241,8 +241,8 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      {/* Scroll Indicator - moved outside content container */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce z-20">
         <div className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex items-start justify-center p-2">
           <div className="w-1 h-2 bg-primary rounded-full animate-pulse" />
         </div>
@@ -397,10 +397,10 @@ const PricingSection = () => {
             Planes diseñados para cada etapa de tu negocio. Sin costos ocultos.
           </p>
           
-          {/* Consulta Banner */}
+          {/* Auditoría Banner */}
           <div className="inline-flex items-center gap-3 glass px-8 py-4 rounded-full mt-10 border-glow">
             <MessageSquare className="w-6 h-6 text-primary" />
-            <span className="text-lg text-foreground font-medium">Primera consulta:</span>
+            <span className="text-lg text-foreground font-medium">Auditoría inicial:</span>
             <span className="text-primary font-heading font-bold text-2xl">$50.000</span>
           </div>
         </div>
@@ -658,7 +658,7 @@ const ContactSection = () => {
             </h2>
             <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
               Contanos sobre tu proyecto y te ayudamos a encontrar la mejor solución. 
-              Primera consulta de diagnóstico a solo $50.000.
+              Auditoría inicial de tu negocio a solo $50.000.
             </p>
 
             {/* Contact Info */}
