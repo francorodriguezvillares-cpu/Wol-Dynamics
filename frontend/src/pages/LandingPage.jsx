@@ -26,8 +26,7 @@ import { Textarea } from "@/components/ui/textarea";
 import logo from "../assets/nosejaja.png";
 // Removed Select import - using native select
 
-const API = process.env.REACT_APP_API_URL + "/api";
-
+const API = process.env.REACT_APP_API_URL
 // Logo component with name
 const Logo = ({ showName = true, size = "default" }) => (
   <div className="flex items-center gap-3">
@@ -631,7 +630,7 @@ const ContactSection = () => {
     setIsSubmitting(true);
     
     try {
-      await axios.post(`${API}/contact`, formData);
+      await axios.post(`${API}/api/contact`, formData);
       toast.success("¡Mensaje enviado! Te contactaremos pronto.");
       setFormData({ name: "", email: "", phone: "", service: "", message: "" });
     } catch (error) {
