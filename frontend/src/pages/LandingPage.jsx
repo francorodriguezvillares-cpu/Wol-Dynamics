@@ -26,8 +26,7 @@ import { Textarea } from "@/components/ui/textarea";
 import logo from "../assets/nosejaja.png";
 // Removed Select import - using native select
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
+const API = process.env.REACT_APP_API_URL + "/api";
 
 // Logo component with name
 const Logo = ({ showName = true, size = "default" }) => (
