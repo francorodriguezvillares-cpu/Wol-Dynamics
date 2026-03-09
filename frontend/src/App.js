@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Toaster } from "@/components/ui/sonner";
 import LandingPage from "@/pages/LandingPage";
 import AdminPage from "@/pages/AdminPage";
+import LoginPage from "./pages/LoginPage";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/admin" element={<AdminPage />} />
+          <Route path="/login" element={<LoginPage />} />
         </Routes>
       </BrowserRouter>
       <Toaster position="top-right" richColors />
