@@ -47,6 +47,13 @@ const Logo = () => (
 );
 
 const AdminPage = () => {
+  useEffect(() => {
+  const auth = localStorage.getItem("admin_auth");
+
+  if (!auth) {
+    window.location.href = "/login";
+  }
+}, []);
   const [messages, setMessages] = useState([]);
   const [stats, setStats] = useState({ total: 0, unread: 0 });
   const [loading, setLoading] = useState(true);
