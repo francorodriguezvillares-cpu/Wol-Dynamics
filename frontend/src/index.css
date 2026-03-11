@@ -33,93 +33,107 @@
     * {
         @apply border-border;
     }
-    
+
     html {
         scroll-behavior: smooth;
     }
-    
+
     body {
         @apply bg-background text-foreground font-body;
         background-color: #030305;
+        line-height: 1.6;
+
+        /* mejora renderizado de fuentes */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+    }
+
+    /* evitar que letras con descendentes se corten */
+    h1, h2, h3, h4, h5, h6 {
+        overflow: visible;
+        line-height: 1.4;
     }
 }
 
 @layer utilities {
     .font-heading {
         font-family: 'Syne', sans-serif;
-        line-height: 1.4;
+        line-height: 1.5;
         overflow: visible;
+        padding-bottom: 0.1em;
     }
-    
+
     .font-body {
         font-family: 'Manrope', sans-serif;
+        line-height: 1.6;
     }
-    
+
     .font-mono {
         font-family: 'JetBrains Mono', monospace;
     }
-    
+
     .text-glow {
         text-shadow: 0 0 20px rgba(0, 162, 255, 0.5), 0 0 40px rgba(0, 162, 255, 0.3);
     }
-    
+
     .text-glow-sm {
         text-shadow: 0 0 10px rgba(0, 162, 255, 0.4);
     }
-    
+
     .box-glow {
         box-shadow: 0 0 20px rgba(0, 162, 255, 0.2), 0 0 40px rgba(0, 162, 255, 0.1);
     }
-    
+
     .box-glow-intense {
         box-shadow: 0 0 30px rgba(0, 162, 255, 0.4), 0 0 60px rgba(0, 162, 255, 0.2);
     }
-    
+
     .glass {
         background: rgba(0, 0, 0, 0.4);
         backdrop-filter: blur(20px);
         border: 1px solid rgba(255, 255, 255, 0.08);
     }
-    
+
     .glass-strong {
         background: rgba(15, 23, 42, 0.8);
         backdrop-filter: blur(24px);
         border: 1px solid rgba(255, 255, 255, 0.1);
     }
-    
+
     .gradient-hero {
         background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0, 162, 255, 0.15), transparent);
     }
-    
+
     .gradient-radial {
         background: radial-gradient(circle at center, rgba(0, 162, 255, 0.1) 0%, transparent 70%);
     }
-    
+
     .border-glow {
         border: 1px solid rgba(0, 162, 255, 0.3);
         box-shadow: 0 0 15px rgba(0, 162, 255, 0.15);
     }
-    
+
     .animate-float {
         animation: float 6s ease-in-out infinite;
     }
-    
+
     .animate-pulse-glow {
         animation: pulseGlow 2s ease-in-out infinite;
     }
-    
+
     .animate-slide-up {
         animation: slideUp 0.6s ease-out forwards;
     }
-    
+
     .animate-fade-in {
         animation: fadeIn 0.5s ease-out forwards;
     }
-    
+
     .skew-button {
         transform: skewX(-8deg);
     }
-    
+
     .skew-button-content {
         transform: skewX(8deg);
     }
