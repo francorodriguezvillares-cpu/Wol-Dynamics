@@ -570,8 +570,7 @@ const AboutSection = () => {
               </p>
               <p>
                 Soy autodidacta, curioso y no paro hasta lograr los resultados. 
-                Lo que me falta en experiencia, lo compenso con dedicación, ganas de aprender 
-                y precios que se adaptan a tu realidad.
+                Tengo mucha dedicación, ganas de aprender y precios que se adaptan a tu realidad.
               </p>
               <p>
                 Si estás buscando alguien que realmente se involucre en tu proyecto 
