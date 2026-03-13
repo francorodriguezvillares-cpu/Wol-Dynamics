@@ -34,6 +34,15 @@
         These two scripts have been added for the Visual Edits, please do not edit or remove them
         -->
         <script>
+
+            type="application/ld+json">
+            {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Wol Dynamics",
+            "url": "https://woldynamics.com/"
+            }
+
             // Only load visual edit scripts when inside an iframe
             if (window.self !== window.top) {
                 // Load debug monitor script
@@ -53,6 +62,7 @@
                 document.head.appendChild(tailwindScript);
             }
         </script>
+
     </head>
     <body>
         <noscript>You need to enable JavaScript to run this app.</noscript>
